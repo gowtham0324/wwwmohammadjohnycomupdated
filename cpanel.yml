@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/vzwmozxb/public_html/
+    - /bin/rm -f $DEPLOYPATH/package.json $DEPLOYPATH/package-lock.json $DEPLOYPATH/vite.config.js $DEPLOYPATH/README.md $DEPLOYPATH/deploy-log.txt
+    - /bin/rm -rf $DEPLOYPATH/src $DEPLOYPATH/scripts
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R dist/. $DEPLOYPATH
+    - /bin/cp -f .htaccess $DEPLOYPATH
