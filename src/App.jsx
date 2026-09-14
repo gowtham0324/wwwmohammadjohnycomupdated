@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import brandLogo from './logos/Mohammad Johny Logo.png';
 import heroImage from './assests/WhatsApp Image 2026-06-06 at 5.54.43 PM.jpeg';
 import aboutImageSrc from './assests/WhatsApp Image 2026-06-06 at 5.54.47 PM.jpeg';
 import logo1 from './logos/WhatsApp Image 2026-06-06 at 5.53.40 PM.jpeg';
@@ -184,10 +185,7 @@ function App() {
       <header className="app-header">
         <nav className="navbar" aria-label="Primary navigation">
           <a className="brand" href="#home">
-            <span className="brand-icon" aria-hidden="true">
-              <img src={logo2} alt="Brand logo" />
-            </span>
-            Mohammad Johny
+            <img className="brand-logo" src={brandLogo} alt="Mohammad Johny" />
           </a>
 
           <button
@@ -479,7 +477,7 @@ function App() {
       <footer className="footer fade-in-section">
         <div className="footer-grid">
           <div className="footer-card">
-            <h3>Mohammad Johny</h3>
+            <img className="footer-logo" src={brandLogo} alt="Mohammad Johny" />
             <p>Founder of Mind Plus &mdash; empowering India through Mind Power workshops, keynote sessions, and life-changing trainings since 2013.</p>
           </div>
           <div className="footer-card">
