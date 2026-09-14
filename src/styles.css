@@ -93,8 +93,9 @@ textarea:focus-visible,
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   backdrop-filter: blur(18px);
-  background: rgba(8, 12, 24, 0.88);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #fff;
+  border-bottom: 1px solid rgba(8, 12, 24, 0.08);
+  box-shadow: 0 8px 24px rgba(8, 12, 24, 0.06);
 }
 
 .navbar {
@@ -104,8 +105,8 @@ textarea:focus-visible,
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.4rem 0;
-  min-height: 78px;
+  padding: 0.6rem 0;
+  min-height: 96px;
 }
 
 .brand {
@@ -120,7 +121,7 @@ textarea:focus-visible,
 }
 
 .brand-logo {
-  height: 4.2rem;
+  height: 5.8rem;
   width: auto;
   object-fit: contain;
   display: block;
@@ -144,14 +145,14 @@ textarea:focus-visible,
   display: none;
   border-radius: 14px;
   padding: 0.85rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--text);
+  background: rgba(8, 12, 24, 0.05);
+  border: 1px solid rgba(8, 12, 24, 0.1);
+  color: #0a1024;
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .nav-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(8, 12, 24, 0.1);
 }
 
 .nav-toggle span {
@@ -164,7 +165,8 @@ textarea:focus-visible,
 }
 
 .nav-link {
-  color: var(--muted);
+  color: #2b3350;
+  font-weight: 600;
   transition: color 0.25s ease;
 }
 
@@ -178,7 +180,7 @@ textarea:focus-visible,
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: var(--text);
+  color: var(--primary);
 }
 
 .hero {
