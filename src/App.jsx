@@ -1,72 +1,27 @@
-import { useState } from 'react';
+const WEBSITE_URL = 'https://www.mohammadjohny.com';
 
 function App() {
-  const [username, setUsername] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    if (!username.trim()) {
-      setError('Please enter your username');
-      return;
-    }
-
-    setError('');
-    setSubmitted(true);
-  }
-
   return (
     <div className="app-shell">
-      <div className="site-shell">
-        <header className="site-header">
-          <div>
-            <p className="site-brand">Mohammad Johny</p>
-            <p className="site-tag">Secure login portal</p>
-          </div>
+      <div className="page-layout">
+        <header className="page-header">
+          <h1>Johhny Site</h1>
+          <p>Launch page for www.mohammadjohny.com</p>
         </header>
 
-        <main className="page-layout">
-          <section className="page-header">
-            <h1>Login</h1>
-            <p>Sign in with your username to continue.</p>
-          </section>
-
-          <div className="card">
-            {!submitted ? (
-              <>
-                <p>Please enter your username below.</p>
-                <form className="login-form" onSubmit={handleSubmit}>
-                  <label htmlFor="username">Username</label>
-                  <input
-                    id="username"
-                    type="text"
-                    value={username}
-                    onChange={(event) => setUsername(event.target.value)}
-                    placeholder="Enter your username"
-                  />
-                  {error && <p className="error">{error}</p>}
-                  <button className="button" type="submit">
-                    Login
-                  </button>
-                </form>
-              </>
-            ) : (
-              <div className="success-message">
-                <p>Welcome, <strong>{username}</strong>!</p>
-                <p>You are now logged in.</p>
-              </div>
-            )}
-          </div>
-        </main>
-
-        <footer className="site-footer">
-          <h2>About Us</h2>
+        <div className="card">
+          <h2>Welcome to Mohammad Johny</h2>
           <p>
-            Mohammad Johny is a secure portal built to give users fast access to the site.
-            We focus on simplicity, speed, and ease of use.
+            This React base page is prepared for <strong>www.mohammadjohny.com</strong>.
           </p>
-        </footer>
+          <p>Click the button below to open the website immediately.</p>
+          <a className="button" href={WEBSITE_URL} target="_blank" rel="noreferrer">
+            Open Website
+          </a>
+          <p className="note">
+            The site loads directly without automatic redirection.
+          </p>
+        </div>
       </div>
     </div>
   );
